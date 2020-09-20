@@ -7,6 +7,7 @@ import {
   LogoutOptions,
   PopupLoginOptions,
   PopupConfigOptions,
+  Auth0Client,
 } from '@auth0/auth0-spa-js';
 import { createContext } from 'react';
 import { AuthState, initialAuthState } from './auth-state';
@@ -132,6 +133,8 @@ export interface Auth0ContextInterface extends AuthState {
    * [Read more about how Logout works at Auth0](https://auth0.com/docs/logout).
    */
   logout: (options?: LogoutOptions) => void;
+
+  client?: Auth0Client;
 }
 
 /**

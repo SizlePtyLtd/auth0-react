@@ -233,6 +233,7 @@ const Auth0Provider = (opts: Auth0ProviderOptions): JSX.Element => {
   return (
     <Auth0Context.Provider
       value={{
+        client,
         ...state,
         getAccessTokenSilently: wrappedGetToken((opts?) =>
           client.getTokenSilently(opts)
